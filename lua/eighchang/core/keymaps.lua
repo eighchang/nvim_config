@@ -43,3 +43,17 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in 
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+
+-- easymotion
+keymap.set("n", "<Leader><Leader>f", "<Plug>(easymotion-overwin-f)")
+keymap.set("n", "<Leader><Leader>s", "<Plug>(easymotion-overwin-f2)")
+keymap.set("n", "<Leader><Leader>L", "<Plug>(easymotion-bd-jk)")
+keymap.set("n", "<Leader><Leader>w", "<Plug>(easymotion-overwin-w)", { noremap = true, silent = true })
+
+-- Vimspector
+keymap.set("n", "<F4>", "<cmd>call vimspector#Launch()<cr>")
+keymap.set("n", "<F5>", "<cmd>call vimspector#StepOver()<cr>")
+keymap.set("n", "<F10>", "<cmd>call vimspector#StepOut()<cr>")
+keymap.set("n", "<F9>", "<cmd>call vimspector#ToggleBreakpoint()<cr>")
+keymap.set("n", "Dw", "<cmd>call vimspector#AddWatch()<cr>")
+keymap.set("n", "De", "<cmd>call vimspector#Evaluate()<cr>")
